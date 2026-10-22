@@ -20,6 +20,7 @@ Our major research directions concerns deep learning for biomedical applications
   * Behavior analysis
     * RFID sensor-based animal tracking
     * Video-based group behavior
+    * Sensor (accelerometer) based lameness recognition
       
   * Natural Language Processing
     * Adverse events from free text reports
