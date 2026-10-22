@@ -9,14 +9,15 @@ layout: default
 
 * WATCH – Web tracking and Algorithmic profiling: Trends, Challenges, Horizons (UNA Europa), led by Akrati Saxena (Leiden University)
 
+* KOMPAS – Competences, Organization, Mobility, and Partnership for systemic prevention in Poland
+
+## Finished Projects
 
 * Social Media-Based Early Warning and Crisis Communication for One Health Threats. The case of Oder River disaster in 2022. BUA Joint Partnership Funding 2024. Together with Maria Rodriguez Read  (University of Melbourne)
 
 * Pandemic interventions to flatten the curve. Needs, effectiveness and impact in the global South - the example of Ghana (Berlin University Alliance).Together with Prof. Dirk Brockmann, Prof. Dr. med. Reinhard Busse, Prof. Christian Drosten.
 
 * IMPACT - Implementierung von KI-basiertem Feedback und Assessment mit Trusted Learning Analytics in Hochschulen (BMBF)
-
-## Finished Projects
 
 * Modellierungsnetz: OptimAgent – Optimierte Strategien zur Kontrolle von Epidemien in hochgradig heterogenen Populationen – Ein entscheidungsanalytischer Ansatz zur agentenbasierten Modellierungen (BMBF)
 
