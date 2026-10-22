@@ -7,17 +7,23 @@ Our major research directions concerns deep learning for biomedical applications
 
 ## Deep learning
 
+  * Pain recognition
+    * In laboratory Mice
+    * In Bovines
+      
   * Digital Pathology
     * Kidney Segmentation
     * Lymphoma Classification
     * Organoid Classification
     * Canine Vaginal Cytology
-  * Pain recognition
-    * In laboratory Mice
-    * In Bovines
+  
   * Behavior analysis
     * RFID sensor-based animal tracking
     * Video-based group behavior
+      
   * Natural Language Processing
     * Adverse events from free text reports
+
+  * Graph Neural Networks
+    * Contact pattern analysis
 
