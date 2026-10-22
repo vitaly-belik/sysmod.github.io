@@ -35,6 +35,6 @@ layout: default
 
 * Optibiom (part of InfectControl, together with Prof. Jürgen Zentek)
 
-Virtual Peer – eine Anwendung für Studenten (2021), Link zu Projektbeschreibung auf DAAD-Portal
+* Virtual Peer – eine Anwendung für Studenten (2021)
 
-Exploring Data Literacy (together with CeDiS)
+* Exploring Data Literacy (together with CeDiS)
