@@ -28,11 +28,26 @@ Our major research directions concerns deep learning for biomedical applications
   * Graph Neural Networks
     * Contact pattern analysis
 
-
 Here is a showcase of my projects:
 
-{% assign project_images = "grad_cam_cow.png,taylor_mouse.png" | split: "," %}
-{% include carousel.html images=project_images %}
+{% capture carousel_data %}
+[
+  {
+    "image": "grad_cam_cow.png",
+    "text": "Feature visualization using Grad-CAM for pain recognision in cows",
+    "link": ""
+  },
+  {
+    "image": "taylor_mouse.png",
+    "text": "Feature visualizition via deep Taylor decomposition for pain recognision in mice",
+    "link": "https://https://doi.org/10.1371/journal.pone.0228059"
+  }
+]
+{% endcapture %}
 
-This text will appear right below the carousel slider.
+{% assign slides = carousel_data | from_json %}
+{% include carousel.html slides=slides %}
+
+
+
 
