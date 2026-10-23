@@ -3,10 +3,10 @@ layout: default
 title: "System Modeling Group"
 carousel_slides:
   - image: "grad_cam_cow.png"
-    text: "Feature visualization using Grad-CAM for pain recognision in cows"
+    text: "Feature visualization using Grad-CAM for pain recognition in cows"
     link: "https://github.com"
   - image: "taylor_mouse.png"
-    text: "Feature visualizition via deep Taylor decomposition for pain recognision in mice"
+    text: "Feature visualizition via deep Taylor decomposition for pain recognition in mice"
     link: "https://doi.org/10.1371/journal.pone.0228059"
 ---
 
