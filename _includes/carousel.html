@@ -1,9 +1,19 @@
 <!-- _includes/carousel.html -->
 <div class="carousel-container">
   <div class="carousel-slides">
-    {% for image in include.images %}
+    {% for slide in include.slides %}
       <div class="slide {% if forloop.first %}active{% endif %}">
-        <img src="{{ image }}" alt="Project Screenshot">
+        <img src="{{ slide.image }}" alt="Project Screenshot">
+        
+        <!-- Caption overlay block -->
+        {% if slide.text != "" or slide.link != "" %}
+          <div class="slide-caption">
+            {% if slide.text %}<p>{{ slide.text }}</p>{% endif %}
+            {% if slide.link != "" and slide.link != nil %}
+              <a href="{{ slide.link }}" class="caption-link" target="_blank" rel="noopener">Learn More &rarr;</a>
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
@@ -12,18 +22,38 @@
 </div>
 
 <style>
-  .carousel-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; }
-  .carousel-slides .slide { display: none; }
+  .carousel-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; background: #000; }
+  .carousel-slides .slide { display: none; position: relative; }
   .carousel-slides .slide.active { display: block; }
-  .carousel-slides img { width: 80%; height: auto; }
-  .prev, .next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; padding: 10px; border: none; cursor: pointer; }
+  .carousel-slides img { width: 100%; height: auto; display: block; }
+  
+  /* Caption Styles */
+  .slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    font-size: 14px;
+  }
+  .slide-caption p { margin: 0 0 5px 0; color: #fff; }
+  .caption-link { color: #3498db; text-decoration: none; font-weight: bold; }
+  .caption-link:hover { text-decoration: underline; }
+
+  .prev, .next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; padding: 10px; border: none; cursor: pointer; z-index: 10; }
   .next { right: 0; }
 </style>
 
 <script>
-  let slideIndex = 0;
+  // Simple check to ensure index stays scoped if multiple carousels exist
+  if (typeof slideIndex === 'undefined') {
+    var slideIndex = 0;
+  }
   function moveSlide(n) {
     const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
     slides[slideIndex].classList.remove('active');
     slideIndex = (slideIndex + n + slides.length) % slides.length;
     slides[slideIndex].classList.add('active');
