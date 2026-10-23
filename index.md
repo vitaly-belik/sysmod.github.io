@@ -6,8 +6,8 @@ carousel_slides:
     text: "Feature visualization using Grad-CAM for pain recognision in cows"
     link: "https://github.com"
   - image: "taylor_mouse.png"
-  - text: "Feature visualizition via deep Taylor decomposition for pain recognision in mice"
-    link: "https://https://doi.org/10.1371/journal.pone.0228059"
+    text: "Feature visualizition via deep Taylor decomposition for pain recognision in mice"
+    link: "https://doi.org/10.1371/journal.pone.0228059"
 ---
 
 # Welcome to the System Modeling Group
