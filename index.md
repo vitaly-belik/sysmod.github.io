@@ -28,3 +28,11 @@ Our major research directions concerns deep learning for biomedical applications
   * Graph Neural Networks
     * Contact pattern analysis
 
+Here is a showcase of my project features:
+
+{% include carousel.html images="
+  grad_cam_cow.png,
+  taylor_mouse.png
+" | split: "," %}
+
+This text will appear right below the carousel slider.
