@@ -1,0 +1,31 @@
+<!-- _includes/carousel.html -->
+<div class="carousel-container">
+  <div class="carousel-slides">
+    {% for image in include.images %}
+      <div class="slide {% if forloop.first %}active{% endif %}">
+        <img src="{{ image }}" alt="Project Screenshot">
+      </div>
+    {% endfor %}
+  </div>
+  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<style>
+  .carousel-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; }
+  .carousel-slides .slide { display: none; }
+  .carousel-slides .slide.active { display: block; }
+  .carousel-slides img { width: 100%; height: auto; }
+  .prev, .next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; padding: 10px; border: none; cursor: pointer; }
+  .next { right: 0; }
+</style>
+
+<script>
+  let slideIndex = 0;
+  function moveSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    slides[slideIndex].classList.remove('active');
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    slides[slideIndex].classList.add('active');
+  }
+</script>
