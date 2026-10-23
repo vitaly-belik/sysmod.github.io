@@ -1,9 +1,21 @@
 ---
 layout: default
+title: "System Modeling Group"
+carousel_slides:
+  - image: "grad_cam_cow.png"
+    text: "Feature visualization using Grad-CAM for pain recognision in cows"
+    link: "https://github.com"
+  - image: "taylor_mouse.png"
+  - text: "Feature visualizition via deep Taylor decomposition for pain recognision in mice"
+    link: "https://https://doi.org/10.1371/journal.pone.0228059"
 ---
+
 # Welcome to the System Modeling Group
 
 Our major research directions concerns deep learning for biomedical applications, human mobility and digital epidemiology. 
+
+
+{% include carousel.html slides=page.carousel_slides %}
 
 ## Deep learning
 
@@ -28,25 +40,20 @@ Our major research directions concerns deep learning for biomedical applications
   * Graph Neural Networks
     * Contact pattern analysis
 
-Here is a showcase of my projects:
 
-{% capture carousel_data %}
-[
-  {
-    "image": "grad_cam_cow.png",
-    "text": "Feature visualization using Grad-CAM for pain recognision in cows",
-    "link": ""
-  },
-  {
-    "image": "taylor_mouse.png",
-    "text": "Feature visualizition via deep Taylor decomposition for pain recognision in mice",
-    "link": "https://https://doi.org/10.1371/journal.pone.0228059"
-  }
-]
-{% endcapture %}
 
-{% assign slides = carousel_data | from_json %}
-{% include carousel.html slides=slides %}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
