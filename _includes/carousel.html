@@ -46,7 +46,46 @@
   .prev:hover, .next:hover { background: rgba(0,0,0,0.8); }
 </style>
 
+
 <script>
+  if (typeof slideIndex === 'undefined') {
+    var slideIndex = 0;
+  }
+  
+  function moveSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
+    slides[slideIndex].classList.remove('active');
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    slides[slideIndex].classList.add('active');
+  }
+
+  // --- AUTOMATIC ROTATION CODE ---
+  // Change 4000 to whatever time you want in milliseconds (e.g., 4000 = 4 seconds)
+  const autoRotateInterval = 4000; 
+  
+  let slideTimer = setInterval(function() {
+    moveSlide(1);
+  }, autoRotateInterval);
+
+  // OPTIONAL USER EXPERIENCE: Pause rotation when the user hovers over the carousel
+  const carouselContainer = document.querySelector('.carousel-container');
+  if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', () => {
+      clearInterval(slideTimer);
+    });
+    
+    carouselContainer.addEventListener('mouseleave', () => {
+      slideTimer = setInterval(function() {
+        moveSlide(1);
+      }, autoRotateInterval);
+    });
+  }
+</script>
+
+
+
+<!-- <script>
   if (typeof slideIndex === 'undefined') {
     var slideIndex = 0;
   }
@@ -57,4 +96,4 @@
     slideIndex = (slideIndex + n + slides.length) % slides.length;
     slides[slideIndex].classList.add('active');
   }
-</script>
+</script> -->
